@@ -1,6 +1,6 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const app = require("./app");
+const { app, sum } = require("./app");
 let should = chai.should();
 
 chai.use(chaiHttp);
@@ -16,5 +16,13 @@ describe("#GET /", () => {
 
         done();
       });
+  });
+});
+
+describe("sum(2,2)", () => {
+  it("should return 4", done => {
+    let ss = sum(2, 2);
+    ss.should.equal(3);
+    done();
   });
 });
