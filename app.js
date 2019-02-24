@@ -8,9 +8,8 @@ app.get("/", (req, res) => {
 });
 
 const sum = (a, b) => a + b;
-app.listen(port, () => console.log(`app started on port 8800 ....`));
+//app.listen(port, () => console.log(`app started on port 8800 ....`));
 
 module.exports = {
-  app,
   sum
 };
