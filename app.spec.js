@@ -26,3 +26,11 @@ describe("sum(2,2)", () => {
     done();
   });
 });
+
+describe("sum(5,6)", () => {
+  it("should return 11", done => {
+    let ss = sum(5, 6);
+    ss.should.equal(11);
+    done();
+  });
+});
