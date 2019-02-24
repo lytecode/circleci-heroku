@@ -1,12 +1,12 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const { app, sum } = require("./app");
+const app = require("./app");
 let should = chai.should();
 
 chai.use(chaiHttp);
 
-describe("Test for circle ci", () => {
-  it("should return it", done => {
+describe("#GET /", () => {
+  it("should return a status of 200", done => {
     chai
       .request(app)
       .get("/")
